@@ -1,5 +1,6 @@
 package com.example.d_day_counter
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,7 +28,8 @@ class MainActivity : AppCompatActivity() {
     private fun setupView() {
         binding.apply {
             fbPlus.setOnClickListener {
-
+                val intent = Intent(this@MainActivity, DDayCreateActivity::class.java)
+                startActivity(intent)
             }
         }
     }
