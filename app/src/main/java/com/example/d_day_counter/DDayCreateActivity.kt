@@ -11,5 +11,17 @@ class DDayCreateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDDayCreateBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupView()
+    }
+
+    private fun setupView() {
+        clickListener()
+    }
+
+    private fun clickListener() {
+        binding.apply {
+            ivClose.setOnClickListener { finish() }
+        }
     }
 }
