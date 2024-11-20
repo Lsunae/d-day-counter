@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/iv_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
@@ -28,6 +29,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_title" />
 
     <TextView
+        android:id="@+id/tv_save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
