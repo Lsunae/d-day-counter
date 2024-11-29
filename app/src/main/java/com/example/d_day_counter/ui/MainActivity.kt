@@ -6,11 +6,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.d_day_counter.R
 import com.example.d_day_counter.databinding.ActivityMainBinding
+import com.example.d_day_counter.ui.adapter.DDayRvAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var dDayAdapter: DDayRvAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         setupView()
+        setAdapter()
     }
 
     private fun setupView() {
@@ -32,6 +36,14 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, DDayCreateActivity::class.java)
                 startActivity(intent)
             }
+        }
+    }
+
+    private fun setAdapter() {
+        dDayAdapter = DDayRvAdapter()
+        binding.rvDDay.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = dDayAdapter
         }
     }
 }
