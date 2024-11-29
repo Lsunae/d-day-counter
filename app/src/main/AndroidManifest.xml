@@ -22,6 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.DDayCreateActivity" />
+
+        <service android:name=".service.DDayForegroundService" />
     </application>
 
 </manifest>
