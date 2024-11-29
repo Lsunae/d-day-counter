@@ -1,4 +1,4 @@
-package com.example.d_day_counter
+package com.example.d_day_counter.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.d_day_counter.R
 import com.example.d_day_counter.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

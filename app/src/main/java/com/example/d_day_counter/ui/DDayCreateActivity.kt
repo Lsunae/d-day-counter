@@ -1,9 +1,10 @@
-package com.example.d_day_counter
+package com.example.d_day_counter.ui
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.d_day_counter.R
 import com.example.d_day_counter.databinding.ActivityDDayCreateBinding
 import java.util.Calendar
 
