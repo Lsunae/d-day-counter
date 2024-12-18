@@ -1,4 +1,4 @@
-package com.example.d_day_counter.ui
+package com.example.d_day_counter.presenter.ui
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog

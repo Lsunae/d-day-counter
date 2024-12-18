@@ -1,4 +1,4 @@
-package com.example.d_day_counter.ui
+package com.example.d_day_counter.presenter.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.d_day_counter.R
 import com.example.d_day_counter.databinding.ActivityMainBinding
-import com.example.d_day_counter.ui.adapter.DDayRvAdapter
+import com.example.d_day_counter.presenter.ui.adapter.DDayRvAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

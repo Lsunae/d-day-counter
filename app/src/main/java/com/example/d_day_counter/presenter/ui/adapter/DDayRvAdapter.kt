@@ -1,4 +1,4 @@
-package com.example.d_day_counter.ui.adapter
+package com.example.d_day_counter.presenter.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
