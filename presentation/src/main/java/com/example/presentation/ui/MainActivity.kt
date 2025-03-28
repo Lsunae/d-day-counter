@@ -1,4 +1,4 @@
-package com.example.d_day_counter.presenter.ui
+package com.example.presentation.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.d_day_counter.R
-import com.example.d_day_counter.databinding.ActivityMainBinding
-import com.example.d_day_counter.presenter.ui.adapter.DDayRvAdapter
+import com.example.presentation.R
+import com.example.presentation.databinding.ActivityMainBinding
+import com.example.presentation.ui.adapter.DDayRvAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

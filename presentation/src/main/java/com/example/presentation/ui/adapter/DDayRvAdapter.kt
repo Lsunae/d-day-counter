@@ -1,10 +1,10 @@
-package com.example.d_day_counter.presenter.ui.adapter
+package com.example.presentation.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.d_day_counter.databinding.ItemDDayBinding
+import com.example.presentation.databinding.ItemDDayBinding
 
 class DDayRvAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private lateinit var context: Context

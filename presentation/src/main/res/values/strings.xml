@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">디데이</string>
+    <string name="d_day_create">디데이 만들기</string>
+    <string name="d_day_type">디데이 유형</string>
+    <string name="d_day_minus">D-Day</string>
+    <string name="d_day_plus">D+Day</string>
+    <string name="d_day_title">디데이 이름</string>
+    <string name="d_day_date">날짜</string>
+    <string name="save">저장</string>
+</resources>
