@@ -2,6 +2,7 @@ package com.example.data.di
 
 import android.content.Context
 import androidx.room.Room
+import com.example.data.dao.DDayDao
 import com.example.data.database.DDayDatabase
 import dagger.Module
 import dagger.Provides
@@ -21,4 +22,9 @@ object DatabaseModule {
             DDayDatabase::class.java,
             "dday_database"
         ).build()
+
+    @Provides
+    fun provideDDayDao(database: DDayDatabase): DDayDao {
+        return database.dDayDao()
+    }
 }
