@@ -9,11 +9,11 @@ import com.example.data.entity.DDayEntity
 @Dao
 interface DDayDao {
     @Query("SELECT * FROM dday_table")
-    suspend fun getAll(): List<DDayEntity>
+    suspend fun getAllDDays(): List<DDayEntity>
 
     @Insert
-    suspend fun insert(dDay: DDayEntity)
+    suspend fun insertDDay(dDay: DDayEntity)
 
     @Delete
-    suspend fun delete(dDay: DDayEntity)
+    suspend fun deleteDDay(dDay: DDayEntity)
 }
