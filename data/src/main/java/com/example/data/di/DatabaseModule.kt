@@ -24,7 +24,5 @@ object DatabaseModule {
         ).build()
 
     @Provides
-    fun provideDDayDao(database: DDayDatabase): DDayDao {
-        return database.dDayDao()
-    }
+    fun provideDDayDao(database: DDayDatabase): DDayDao = database.dDayDao()
 }
