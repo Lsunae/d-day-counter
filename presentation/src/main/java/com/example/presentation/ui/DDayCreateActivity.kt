@@ -3,13 +3,18 @@ package com.example.presentation.ui
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.presentation.R
 import com.example.presentation.databinding.ActivityDDayCreateBinding
+import com.example.presentation.viewmodel.DDayViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.Calendar
 
+@AndroidEntryPoint
 class DDayCreateActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDDayCreateBinding
+    private val viewModel by viewModels<DDayViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +30,7 @@ class DDayCreateActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun clickListener() {
-        binding.apply {
+        binding.run {
             ivClose.setOnClickListener { finish() }
 
             val cal = Calendar.getInstance()

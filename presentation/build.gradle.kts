@@ -51,6 +51,8 @@ dependencies {
     kapt(libs.hilt.android.compiler)
 
     implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.activity.ktx)
 }
 
 kapt {
