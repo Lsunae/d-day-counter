@@ -21,6 +21,9 @@ class DDayViewModel @Inject constructor(
     private val _dDays = MutableLiveData<List<DDay>>()
     val dDays: LiveData<List<DDay>> = _dDays
 
+    private val _addResult = MutableLiveData<Boolean>()
+    val addResult: LiveData<Boolean> = _addResult
+
     fun getDDays() {
         viewModelScope.launch {
             _dDays.value = getAllDDaysUseCase()
@@ -29,8 +32,13 @@ class DDayViewModel @Inject constructor(
 
     fun addDDay(dDay: DDay) {
         viewModelScope.launch {
-            addDDayUseCase(dDay)
-            getDDays()
+            try {
+                addDDayUseCase(dDay)
+                _addResult.value = true
+                getDDays()
+            } catch (e: Exception) {
+                _addResult.value = false
+            }
         }
     }
 
