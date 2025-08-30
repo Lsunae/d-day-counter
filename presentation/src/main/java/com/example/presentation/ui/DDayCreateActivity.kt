@@ -66,13 +66,12 @@ class DDayCreateActivity : AppCompatActivity() {
                     etTitle.error = getString(R.string.d_day_title_hint)
                     return@setOnSingleClickListener
                 }
-                val localDate = java.time.LocalDate.of(selectedYear, selectedMonth + 1, selectedDay)
-
-                // 2. LocalDate를 Long 타입 (epoch millis)로 변환
-                val epochMilli = localDate
-                    .atStartOfDay(java.time.ZoneId.systemDefault())
-                    .toInstant()
-                    .toEpochMilli()
+                val calForEpoch = Calendar.getInstance().apply {
+                    // DatePicker/Calendar의 month는 0부터 시작하므로 그대로 사용
+                    set(selectedYear, selectedMonth, selectedDay, 0, 0, 0)
+                    set(Calendar.MILLISECOND, 0)
+                }
+                val epochMilli = calForEpoch.timeInMillis
                 val dDay = DDay(
                     id = 0,
                     title = title,

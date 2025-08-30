@@ -49,82 +49,115 @@
         android:background="@color/gray20"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
-    <LinearLayout
-        android:id="@+id/ll_date_type"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/border_bottom"
-        android:orientation="horizontal"
-        android:paddingVertical="15dp"
-        android:weightSum="1"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_line">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/d_day_type"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_date_type"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawablePadding="4dp"
-            android:gravity="end"
-            android:text="@string/d_day_minus"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:drawableEndCompat="@drawable/ic_arrow_down" />
+            <LinearLayout
+                android:id="@+id/ll_date_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_bottom"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                android:weightSum="1">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/d_day_type"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
 
-    <EditText
-        android:id="@+id/et_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/border_bottom"
-        android:hint="@string/d_day_title"
-        android:paddingVertical="15dp"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/ll_date_type" />
+                <TextView
+                    android:id="@+id/tv_date_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="4dp"
+                    android:gravity="end"
+                    android:text="@string/d_day_minus"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:drawableEndCompat="@drawable/ic_arrow_down" />
 
-    <LinearLayout
-        android:id="@+id/ll_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/border_bottom"
-        android:orientation="horizontal"
-        android:paddingVertical="15dp"
-        android:weightSum="1"
-        app:layout_constraintTop_toBottomOf="@+id/et_title">
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/d_day_date"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_bottom"
+                android:hint="@string/d_day_title"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/tv_date"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawablePadding="4dp"
-            android:gravity="end"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:drawableEndCompat="@drawable/ic_arrow_down" />
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_bottom"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                android:weightSum="1">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/d_day_date"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="4dp"
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:drawableEndCompat="@drawable/ic_arrow_down" />
+
+            </LinearLayout>
+
+            <!-- 디데이 내용 입력 부분 -->
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_bottom"
+                android:gravity="top|start"
+                android:hint="디데이에 대한 설명을 입력하세요"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!-- 하단 여백 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
